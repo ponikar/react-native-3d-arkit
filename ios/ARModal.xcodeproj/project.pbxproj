@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6199A06A29A34A980052E6AC /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6199A06829A34A910052E6AC /* ARKit.framework */; };
+		61B55D0429A765B300761D83 /* CubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B55D0329A765B300761D83 /* CubeManager.swift */; };
 		61BD243129A600F800FF7826 /* ARViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243029A600F800FF7826 /* ARViewManager.swift */; };
 		61BD243329A6013300FF7826 /* ARViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243229A6013300FF7826 /* ARViewManager.m */; };
 		61BD243529A603E800FF7826 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243429A603E800FF7826 /* ARView.swift */; };
@@ -20,7 +21,6 @@
 		61BD243B29A6507700FF7826 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243A29A6507700FF7826 /* Context.swift */; };
 		61BD243E29A653BA00FF7826 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243D29A653BA00FF7826 /* Scene.swift */; };
 		61BD244129A654F700FF7826 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD244029A654F700FF7826 /* Cube.swift */; };
-		61BD244529A656CB00FF7826 /* CubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD244429A656CB00FF7826 /* CubeManager.swift */; };
 		61BD244729A657F700FF7826 /* ExportModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD244629A657F700FF7826 /* ExportModule.m */; };
 		61BD244929A6590300FF7826 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD244829A6590300FF7826 /* SceneManager.swift */; };
 		61BD244B29A6593800FF7826 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD244A29A6593800FF7826 /* CameraManager.swift */; };
@@ -55,6 +55,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ARModal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARModal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6199A06829A34A910052E6AC /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		6199A06E29A34AFC0052E6AC /* ARModal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARModal-Bridging-Header.h"; sourceTree = "<group>"; };
+		61B55D0329A765B300761D83 /* CubeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeManager.swift; sourceTree = "<group>"; };
 		61BD243029A600F800FF7826 /* ARViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewManager.swift; sourceTree = "<group>"; };
 		61BD243229A6013300FF7826 /* ARViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewManager.m; sourceTree = "<group>"; };
 		61BD243429A603E800FF7826 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		61BD243A29A6507700FF7826 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		61BD243D29A653BA00FF7826 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		61BD244029A654F700FF7826 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
-		61BD244429A656CB00FF7826 /* CubeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeManager.swift; sourceTree = "<group>"; };
 		61BD244629A657F700FF7826 /* ExportModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExportModule.m; sourceTree = "<group>"; };
 		61BD244829A6590300FF7826 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		61BD244A29A6593800FF7826 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				61BD244029A654F700FF7826 /* Cube.swift */,
-				61BD244429A656CB00FF7826 /* CubeManager.swift */,
+				61B55D0329A765B300761D83 /* CubeManager.swift */,
 			);
 			path = Cube;
 			sourceTree = "<group>";
@@ -496,12 +496,12 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				61BD243829A64F2600FF7826 /* Camera.swift in Sources */,
 				61BD243B29A6507700FF7826 /* Context.swift in Sources */,
-				61BD244529A656CB00FF7826 /* CubeManager.swift in Sources */,
 				61BD243E29A653BA00FF7826 /* Scene.swift in Sources */,
 				61BD244129A654F700FF7826 /* Cube.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				61BD244729A657F700FF7826 /* ExportModule.m in Sources */,
 				61BD243129A600F800FF7826 /* ARViewManager.swift in Sources */,
+				61B55D0429A765B300761D83 /* CubeManager.swift in Sources */,
 				61BD244929A6590300FF7826 /* SceneManager.swift in Sources */,
 				61BD243329A6013300FF7826 /* ARViewManager.m in Sources */,
 			);

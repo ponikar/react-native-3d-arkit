@@ -10,26 +10,11 @@ import ARKit
 
 class Camera: UIView {
   
-  var camera: SCNCamera!
-  var cameraNode: SCNNode!
+  var camera = Context.mainCamera!
+  var cameraNode = Context.mainCameraNode!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-  }
-  
-  func initCamera() {
-    camera = SCNCamera()
-    cameraNode = SCNNode()
-    cameraNode.camera = camera
-    setPosition()
-  }
-  
-  func setPosition() {
-    cameraNode.position = SCNVector3(x: 0, y: 0, z: 1.5)
-  }
-  
-  func addCameraToScene() {
-    Context.sceneView.pointOfView = cameraNode
   }
   
   required init?(coder: NSCoder) {

@@ -2,9 +2,10 @@
 //  CubeManager.swift
 //  ARModal
 //
-//  Created by Ponikar Darshan janardan on 22/02/23.
+//  Created by Ponikar Darshan janardan on 23/02/23.
 //
 
+import Foundation
 
 @objc(CubeManager)
 class CubeManager: RCTViewManager {
@@ -20,6 +21,3 @@ class CubeManager: RCTViewManager {
     return "Cube"
   }
 }
-
-
-

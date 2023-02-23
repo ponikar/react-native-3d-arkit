@@ -7,6 +7,12 @@
 
 @objc(SceneManager)
 class SceneManager: RCTViewManager {
+  
+  override init() {
+    Context.scene = SCNScene()
+    Context.sceneView = SCNView()
+  }
+  
   override func view() -> UIView! {
     return Scene()
   }

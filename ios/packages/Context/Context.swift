@@ -13,6 +13,8 @@ class Context {
   static var scene: SCNScene!
   static var sceneView: SCNView!
   static var session: ARSession!
+  static var mainCamera: SCNCamera!
+  static var mainCameraNode: SCNNode!
   
   init() {
     // what to do here??
