@@ -29,9 +29,41 @@ class Scene: UIView {
     Context.mainCameraNode.position = SCNVector3(0, 0, 0.5)
     Context.sceneView.pointOfView = Context.mainCameraNode
     
+    Context.sceneView.showsStatistics = true
+    loadIronMan()
   }
   
-  required init?(coder aDecoder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
-}
+  
+  func loadIronMan() {
+    
+    guard let modelURL = Bundle.main.url(forResource: "iron-man", withExtension: "json") else {
+      print("Cannot find iron-man.json")
+      return
+    }
+    do {
+      print("IRON MAN IS BACK!")
+      
+      let sceneSource = SCNSceneSource(url: modelURL, options: nil)!
+      let scene = try sceneSource.scene(options: nil)
+      
+      // Create a node to hold the model
+      let modalNode: SCNNode = SCNNode()
+      
+      // Add the model to the node
+      for childNode in scene.rootNode.childNodes {
+          modalNode.addChildNode(childNode)
+      }
+      
+      Context.scene.rootNode.addChildNode(modalNode)
+      print("IRON MAN IS BACK!")
+    } catch let error {
+      print("Error loading model: \(error.localizedDescription)")
+      }
+    }
+
+     
+  }
+

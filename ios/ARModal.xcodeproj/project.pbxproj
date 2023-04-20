@@ -12,6 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6115C28029DAF23E00647B80 /* GlobalContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6115C27E29DAF23E00647B80 /* GlobalContext.cpp */; };
+		6115C28429DAFB1900647B80 /* JSRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6115C28329DAFB1900647B80 /* JSRuntime.mm */; };
+		613B43C129C981AF00A1D85C /* experiment.mm in Sources */ = {isa = PBXBuildFile; fileRef = 613B43BF29C981AF00A1D85C /* experiment.mm */; };
+		618EE51229ACA4AD0034F38F /* iron-man.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EE51129ACA4AD0034F38F /* iron-man.json */; };
+		618EE51329ACA4AD0034F38F /* iron-man.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EE51129ACA4AD0034F38F /* iron-man.json */; };
 		6199A06A29A34A980052E6AC /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6199A06829A34A910052E6AC /* ARKit.framework */; };
 		61B55D0429A765B300761D83 /* CubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B55D0329A765B300761D83 /* CubeManager.swift */; };
 		61BD243129A600F800FF7826 /* ARViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD243029A600F800FF7826 /* ARViewManager.swift */; };
@@ -53,6 +58,12 @@
 		5709B34CF0A7D63546082F79 /* Pods-ARModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARModal.release.xcconfig"; path = "Target Support Files/Pods-ARModal/Pods-ARModal.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ARModal-ARModalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARModal-ARModalTests.debug.xcconfig"; path = "Target Support Files/Pods-ARModal-ARModalTests/Pods-ARModal-ARModalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ARModal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARModal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6115C27E29DAF23E00647B80 /* GlobalContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalContext.cpp; sourceTree = "<group>"; };
+		6115C28329DAFB1900647B80 /* JSRuntime.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = JSRuntime.mm; sourceTree = "<group>"; };
+		613B43BF29C981AF00A1D85C /* experiment.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = experiment.mm; path = ARModal/experiment.mm; sourceTree = "<group>"; };
+		613B43C029C981AF00A1D85C /* experiment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = experiment.h; path = ARModal/experiment.h; sourceTree = "<group>"; };
+		617C4FFE29CB4D6E009C2946 /* GlobalContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalContext.h; sourceTree = "<group>"; };
+		618EE51129ACA4AD0034F38F /* iron-man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iron-man.json"; sourceTree = "<group>"; };
 		6199A06829A34A910052E6AC /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		6199A06E29A34AFC0052E6AC /* ARModal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARModal-Bridging-Header.h"; sourceTree = "<group>"; };
 		61B55D0329A765B300761D83 /* CubeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeManager.swift; sourceTree = "<group>"; };
@@ -112,6 +123,7 @@
 		13B07FAE1A68108700A75B9A /* ARModal */ = {
 			isa = PBXGroup;
 			children = (
+				618EE51129ACA4AD0034F38F /* iron-man.json */,
 				6199A06D29A34AC80052E6AC /* packages */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -120,6 +132,11 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				61BD244629A657F700FF7826 /* ExportModule.m */,
+				613B43BF29C981AF00A1D85C /* experiment.mm */,
+				613B43C029C981AF00A1D85C /* experiment.h */,
+				6115C27E29DAF23E00647B80 /* GlobalContext.cpp */,
+				617C4FFE29CB4D6E009C2946 /* GlobalContext.h */,
+				6115C28329DAFB1900647B80 /* JSRuntime.mm */,
 			);
 			name = ARModal;
 			sourceTree = "<group>";
@@ -314,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618EE51329ACA4AD0034F38F /* iron-man.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				618EE51229ACA4AD0034F38F /* iron-man.json in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +517,10 @@
 				61BD243B29A6507700FF7826 /* Context.swift in Sources */,
 				61BD243E29A653BA00FF7826 /* Scene.swift in Sources */,
 				61BD244129A654F700FF7826 /* Cube.swift in Sources */,
+				6115C28429DAFB1900647B80 /* JSRuntime.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				6115C28029DAF23E00647B80 /* GlobalContext.cpp in Sources */,
+				613B43C129C981AF00A1D85C /* experiment.mm in Sources */,
 				61BD244729A657F700FF7826 /* ExportModule.m in Sources */,
 				61BD243129A600F800FF7826 /* ARViewManager.swift in Sources */,
 				61B55D0429A765B300761D83 /* CubeManager.swift in Sources */,
